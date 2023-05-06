@@ -42,7 +42,6 @@ public class CoffeeShopApplication {
     public void addCustomer(@RequestBody NewCustomerRequest request){
         Customer customer = new Customer();
         customer.setName(request.name());
-        customer.setAge(request.age());
         customer.setEmail(request.email());
 
         customerRepository.save(customer);
@@ -59,7 +58,6 @@ public class CoffeeShopApplication {
         if (opt.isPresent()) {
             Customer customer = opt.get();
             customer.setName(request.name());
-            customer.setAge(request.age());
             customer.setEmail(request.email());
 
             customerRepository.save(customer);
