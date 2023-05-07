@@ -1,4 +1,4 @@
-package com.coffeeshop;
+package com.coffeeshop.Models;
 
 
 import jakarta.persistence.Entity;
@@ -17,7 +17,7 @@ public class Customer {
     private String email;
     private String password;
 
-    public Customer(Integer id, String name, String email, Integer age, String password) {
+    public Customer(Integer id, String name, String email, String password) {
         this.id = id;
         this.name = name;
         this.email = email;

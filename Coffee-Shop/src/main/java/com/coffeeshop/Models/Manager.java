@@ -1,11 +1,7 @@
 package com.coffeeshop.Models;
 
-import com.coffeeshop.CoffeeShopApplication;
-import com.coffeeshop.Customer;
 import jakarta.persistence.*;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import java.util.ArrayList;
+
 import java.util.Objects;
 
 
@@ -20,12 +16,12 @@ public class Manager {
     private String email;
     private String password;
 
-    //There can be many employees managed by one customer.
-    @OneToMany
-    private ArrayList<Employee> Employees ;
 
 
-    public Manager(Integer id, String name, String email, Integer age, String password) {
+//There can be many employees managed by one manager.
+
+
+    public Manager(Integer id, String name, String email, String password) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -67,13 +63,12 @@ public class Manager {
         this.password = password;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        com.coffeeshop.Models.Manager Manager = (com.coffeeshop.Models.Manager) o;
-        return Objects.equals(id, Manager.id) && Objects.equals(name, Manager.name) && Objects.equals(email, Manager.email) && Objects.equals(password, Manager.password);
+        Manager manager = (Manager) o;
+        return Objects.equals(id, manager.id) && Objects.equals(name, manager.name) && Objects.equals(email, manager.email) && Objects.equals(password, manager.password);
     }
 
     @Override
@@ -83,11 +78,11 @@ public class Manager {
 
     @Override
     public String toString() {
-        return "{" +
+        return "Manager{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                "password" + password +
+                ", password='" + password + '\'' +
                 '}';
     }
 }

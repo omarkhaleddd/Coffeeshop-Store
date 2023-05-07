@@ -17,7 +17,7 @@ public class Employee {
     private String password;
 
 
-    public Employee(Integer id, String name, String email, Integer age, String password) {
+    public Employee(Integer id, String name, String email, String password) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -63,8 +63,8 @@ public class Employee {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        com.coffeeshop.Models.Employee Employee = (com.coffeeshop.Models.Employee) o;
-        return Objects.equals(id, Employee.id) && Objects.equals(name, Employee.name) && Objects.equals(email, Employee.email) && Objects.equals(password, Employee.password);
+        Employee employee = (Employee) o;
+        return Objects.equals(id, employee.id) && Objects.equals(name, employee.name) && Objects.equals(email, employee.email) && Objects.equals(password, employee.password);
     }
 
     @Override
@@ -74,11 +74,11 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "{" +
+        return "Employee{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                "password" + password +
+                ", password='" + password + '\'' +
                 '}';
     }
 }

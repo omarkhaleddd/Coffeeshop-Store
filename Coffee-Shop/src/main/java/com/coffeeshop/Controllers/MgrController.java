@@ -1,8 +1,10 @@
 package com.coffeeshop.Controllers;
 
-import Repositories.ManagerRepository;
+
+
 import com.coffeeshop.Models.Employee;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.coffeeshop.Services.EmployeeService;
+import com.coffeeshop.Services.ManagerService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,24 +13,22 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("api/v1/manager")
+@RequestMapping("/Manager")
 public class MgrController {
 
-    private final ManagerRepository managerRepository;
+    private final ManagerService mgrService;
+    private final EmployeeService empService;
 
-    public MgrController(ManagerRepository managerRepository) {
-        this.managerRepository = managerRepository;
+    public MgrController(ManagerService mgrService, EmployeeService empService) {
+        this.mgrService = mgrService;
+        this.empService = empService;
     }
-
 
     //view Orders
 
     //add employee
     @PostMapping
     public void addEmployee(@RequestBody Employee request){
-        Employee employee = new Employee();
-        employee.setName(request.getName());
-        employee.setEmail(request.getEmail());
-        managerRepository.save(employee);
+        empService.createEmloyee(request);
     }
 }
