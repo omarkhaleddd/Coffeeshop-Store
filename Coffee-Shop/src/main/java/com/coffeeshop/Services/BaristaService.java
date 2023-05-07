@@ -11,7 +11,7 @@ public class BaristaService {
         this.empRepo = empRepo;
     }
 
-    public void createBarista(Barista barista){
-        empRepo.save(barista);
+    public Barista createBarista(Barista barista){
+        return empRepo.save(barista);
     }
 }
