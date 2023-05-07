@@ -2,8 +2,8 @@ package com.coffeeshop.Controllers;
 
 
 
-import com.coffeeshop.Models.Employee;
-import com.coffeeshop.Services.EmployeeService;
+import com.coffeeshop.Models.Barista;
+import com.coffeeshop.Services.BaristaService;
 import com.coffeeshop.Services.ManagerService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,18 +17,18 @@ import org.springframework.web.bind.annotation.RestController;
 public class MgrController {
 
     private final ManagerService mgrService;
-    private final EmployeeService empService;
+    private final BaristaService barService;
 
-    public MgrController(ManagerService mgrService, EmployeeService empService) {
+    public MgrController(ManagerService mgrService, BaristaService barService) {
         this.mgrService = mgrService;
-        this.empService = empService;
+        this.barService = barService;
     }
 
     //view Orders
 
     //add employee
     @PostMapping
-    public void addEmployee(@RequestBody Employee request){
-        empService.createEmloyee(request);
+    public void addBarista(@RequestBody Barista request){
+        barService.createBarista(request);
     }
 }
