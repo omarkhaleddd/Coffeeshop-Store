@@ -6,9 +6,9 @@ import jakarta.persistence.*;
 public abstract class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Integer id ;
-    private double price;
-    private String description;
+    protected Integer id ;
+    protected double price;
+    protected String description;
 
 
     public Integer getId() {

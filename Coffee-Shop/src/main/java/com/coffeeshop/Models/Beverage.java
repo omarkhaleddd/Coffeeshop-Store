@@ -7,9 +7,9 @@ public class Beverage extends Product{
 
     @Override
     public String getDescription() {
-        return null;
+        return description;
     }
-
+    //we didnt implement cost
     @Override
     public double cost() {
         return 0;
@@ -17,6 +17,6 @@ public class Beverage extends Product{
 
     @Override
     public void setDescription(String description) {
-
+        super.description = description; ;
     }
 }
