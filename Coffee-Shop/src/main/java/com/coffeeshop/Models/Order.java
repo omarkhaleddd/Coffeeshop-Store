@@ -6,10 +6,11 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 @Entity
+@Table(name = "`Order`")
 public class Order {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.SEQUENCE)
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
     @OneToMany
     private ArrayList<Product> Products;

@@ -1,9 +1,6 @@
 package com.coffeeshop.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public abstract class Product {
@@ -12,6 +9,7 @@ public abstract class Product {
     private Integer id ;
     private double price;
     private String description;
+
 
     public Integer getId() {
         return id;

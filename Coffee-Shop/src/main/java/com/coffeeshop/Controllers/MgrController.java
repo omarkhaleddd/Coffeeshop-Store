@@ -3,13 +3,14 @@ package com.coffeeshop.Controllers;
 
 
 import com.coffeeshop.Models.Barista;
+import com.coffeeshop.Models.Beverage;
 import com.coffeeshop.Models.Cashier;
+import com.coffeeshop.Models.Product;
 import com.coffeeshop.Services.BaristaService;
+import com.coffeeshop.Services.BeverageService;
 import com.coffeeshop.Services.CashierService;
 import com.coffeeshop.Services.ManagerService;
-import org.apache.coyote.Request;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,12 +23,14 @@ public class MgrController {
     private final BaristaService barService;
 
     private final CashierService cashierService;
+    private final BeverageService beverageService;
 
 
-    public MgrController(ManagerService mgrService, BaristaService barService, CashierService cashierService) {
+    public MgrController(ManagerService mgrService, BaristaService barService, CashierService cashierService, BeverageService beverageService) {
         this.mgrService = mgrService;
         this.barService = barService;
         this.cashierService = cashierService;
+        this.beverageService = beverageService;
     }
 
     //view Orders
@@ -58,6 +61,19 @@ public class MgrController {
         else
         {
             return new ResponseEntity<Cashier>(request, HttpStatus.BAD_REQUEST);
+        }
+    }
+    @ResponseBody
+    @PostMapping("/addBeverage")
+    public ResponseEntity<Beverage> addBeverage(@RequestBody Beverage request){
+        Beverage beverage = beverageService.createBeverage(request);
+        if (beverage != null)
+        {
+            return new ResponseEntity<Beverage>(request, HttpStatus.OK);
+        }
+        else
+        {
+            return new ResponseEntity<Beverage>(request, HttpStatus.BAD_REQUEST);
         }
     }
 }
