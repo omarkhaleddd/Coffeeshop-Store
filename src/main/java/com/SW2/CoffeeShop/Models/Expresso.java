@@ -1,4 +1,4 @@
-package com.coffeeshop.Models;
+package com.SW2.CoffeeShop.Models;
 
 public class Expresso extends Beverage {
     @Override

@@ -1,7 +1,10 @@
-package com.coffeeshop.Services;
+package com.SW2.CoffeeShop.Services;
 
-import com.coffeeshop.Models.Employee;
-import com.coffeeshop.Repositories.EmployeeRepository;
+
+
+
+import com.SW2.CoffeeShop.Models.Employee;
+import com.SW2.CoffeeShop.Repositories.EmployeeRepository;
 import org.springframework.stereotype.Service;
 
 @Service

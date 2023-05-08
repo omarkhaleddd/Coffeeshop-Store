@@ -1,7 +1,8 @@
-package com.coffeeshop.Services;
+package com.SW2.CoffeeShop.Services;
 
-import com.coffeeshop.Models.Cashier;
-import com.coffeeshop.Repositories.EmployeeRepository;
+
+import com.SW2.CoffeeShop.Models.Cashier;
+import com.SW2.CoffeeShop.Repositories.EmployeeRepository;
 import org.springframework.stereotype.Service;
 
 @Service

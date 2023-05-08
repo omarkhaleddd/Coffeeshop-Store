@@ -1,4 +1,5 @@
-package com.coffeeshop.Models;
+package com.SW2.CoffeeShop.Models;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

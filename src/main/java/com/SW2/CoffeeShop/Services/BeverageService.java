@@ -1,8 +1,9 @@
-package com.coffeeshop.Services;
+package com.SW2.CoffeeShop.Services;
 
-import com.coffeeshop.Models.Beverage;
-import com.coffeeshop.Models.Product;
-import com.coffeeshop.Repositories.ProductRepository;
+
+import com.SW2.CoffeeShop.Models.Beverage;
+import com.SW2.CoffeeShop.Repositories.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service

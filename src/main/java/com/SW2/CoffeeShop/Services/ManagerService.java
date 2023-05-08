@@ -1,7 +1,8 @@
-package com.coffeeshop.Services;
+package com.SW2.CoffeeShop.Services;
 
 
-import com.coffeeshop.Repositories.ManagerRepository;
+
+import com.SW2.CoffeeShop.Repositories.ManagerRepository;
 import org.springframework.stereotype.Service;
 
 

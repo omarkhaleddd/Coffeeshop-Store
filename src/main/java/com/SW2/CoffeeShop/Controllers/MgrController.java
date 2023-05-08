@@ -1,15 +1,13 @@
-package com.coffeeshop.Controllers;
+package com.SW2.CoffeeShop.Controllers;
 
 
-
-import com.coffeeshop.Models.Barista;
-import com.coffeeshop.Models.Beverage;
-import com.coffeeshop.Models.Cashier;
-import com.coffeeshop.Models.Product;
-import com.coffeeshop.Services.BaristaService;
-import com.coffeeshop.Services.BeverageService;
-import com.coffeeshop.Services.CashierService;
-import com.coffeeshop.Services.ManagerService;
+import com.SW2.CoffeeShop.Models.Barista;
+import com.SW2.CoffeeShop.Models.Beverage;
+import com.SW2.CoffeeShop.Models.Cashier;
+import com.SW2.CoffeeShop.Services.BaristaService;
+import com.SW2.CoffeeShop.Services.BeverageService;
+import com.SW2.CoffeeShop.Services.CashierService;
+import com.SW2.CoffeeShop.Services.ManagerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

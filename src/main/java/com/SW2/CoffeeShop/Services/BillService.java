@@ -1,7 +1,8 @@
-package com.coffeeshop.Services;
+package com.SW2.CoffeeShop.Services;
 
-import com.coffeeshop.Models.Bill;
-import com.coffeeshop.Repositories.BillRepository;
+
+import com.SW2.CoffeeShop.Models.Bill;
+import com.SW2.CoffeeShop.Repositories.BillRepository;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,7 +14,12 @@ public class BillService {
     }
     //calculate subTotalCost implementation NEEDED!
     //calculate TotalCost implementation NEEDED!
-    public double calculatesubTotalCost(Bill bill){return 0;}
+    public double calculatesubTotalCost(Bill bill){
+
+
+
+        return 0;
+    }
     public double calculateTotalCost(Bill bill){return 0;}
 
 }

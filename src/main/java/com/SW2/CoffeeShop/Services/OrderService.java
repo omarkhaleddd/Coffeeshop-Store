@@ -1,8 +1,8 @@
-package com.coffeeshop.Services;
+package com.SW2.CoffeeShop.Services;
 
-import com.coffeeshop.Models.Order;
-import com.coffeeshop.Models.Product;
-import com.coffeeshop.Repositories.OrderRepository;
+import com.SW2.CoffeeShop.Models.Order;
+import com.SW2.CoffeeShop.Models.Product;
+import com.SW2.CoffeeShop.Repositories.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,7 +35,7 @@ public class OrderService {
         orderRepo.delete(order);
     }
 
-    public Order addProductToOrder(Product product,Order order){
+    public Order addProductToOrder(Product product, Order order){
         ArrayList<Product> prodArr = order.getProducts();
         prodArr.add(product);
         order.setProducts(prodArr);

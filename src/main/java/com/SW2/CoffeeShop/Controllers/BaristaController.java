@@ -1,8 +1,8 @@
-package com.coffeeshop.Controllers;
 
-import com.coffeeshop.Models.Barista;
-import com.coffeeshop.Models.Order;
-import com.coffeeshop.Services.BaristaService;
+
+package com.SW2.CoffeeShop.Controllers;
+import com.SW2.CoffeeShop.Models.Order;
+import com.SW2.CoffeeShop.Services.BaristaService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,8 +1,9 @@
-package com.coffeeshop.Services;
+package com.SW2.CoffeeShop.Services;
 
-import com.coffeeshop.Models.Bill;
-import com.coffeeshop.Models.Order;
-import com.coffeeshop.Repositories.OrderRepository;
+
+import com.SW2.CoffeeShop.Models.Bill;
+import com.SW2.CoffeeShop.Models.Order;
+import com.SW2.CoffeeShop.Repositories.OrderRepository;
 import org.springframework.stereotype.Service;
 
 @Service

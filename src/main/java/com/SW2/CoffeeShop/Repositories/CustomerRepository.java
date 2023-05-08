@@ -1,6 +1,7 @@
-package com.coffeeshop.Repositories;
+package com.SW2.CoffeeShop.Repositories;
 
-import com.coffeeshop.Models.Customer;
+
+import com.SW2.CoffeeShop.Models.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CustomerRepository extends JpaRepository<Customer,Integer> {
